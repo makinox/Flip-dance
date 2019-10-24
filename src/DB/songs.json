@@ -1,0 +1,42 @@
+[
+    {
+        "Nombre": "A little party nerver kill nobody",
+        "Multimedia":"https://picsum.photos/id/8/300/300",
+        "Dificultad": "Facil",
+        "Intensidad": "Moderada",
+        "Version": "Normal",
+        "Año": "2019"
+    },
+    {
+        "Nombre": "A little party nerver kill nobody",
+        "Multimedia":"https://picsum.photos/id/8/300/300",
+        "Dificultad": "Facil",
+        "Intensidad": "Moderada",
+        "Version": "Años 20",
+        "Año": "2019"
+    },
+    {
+        "Nombre": "Adeyyo",
+        "Multimedia":"https://picsum.photos/id/8/300/300",
+        "Dificultad": "Facil",
+        "Intensidad": "Baja",
+        "Version": "Normal",
+        "Año": "2019"
+    },
+    {
+        "Nombre": "Bang Bang Bang",
+        "Multimedia":"https://picsum.photos/id/8/300/300",
+        "Dificultad": "Dificil",
+        "Intensidad": "Intensa",
+        "Version": "Normal",
+        "Año": "2019"
+    },
+    {
+        "Nombre": "Bang Bang Bang",
+        "Multimedia":"https://picsum.photos/id/8/300/300",
+        "Dificultad": "Extrema",
+        "Intensidad": "Intensa",
+        "Version": "Extrema",
+        "Año": "2019"
+    }
+]

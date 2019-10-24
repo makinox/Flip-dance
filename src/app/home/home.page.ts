@@ -9,4 +9,8 @@ export class HomePage {
 
   constructor() {}
 
+  randomSong() {
+    console.log('Hola')
+  }
+
 }
