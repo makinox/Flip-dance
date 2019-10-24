@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import songs from '../../DB/songs.json'
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor() {
+    console.log(songs)
+  }
 
   randomSong() {
-    console.log('Hola')
+    const random = this.getRandomInt(0, songs.length)
+    console.log(songs[random])
+  }
+
+  getRandomInt(min: number = 0, max: number = 5) {
+    return Math.floor(Math.random() * (max - min)) + min;
   }
 
 }
