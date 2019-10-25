@@ -47,11 +47,17 @@
 
   display: grid;
   grid-template-columns: repeat(2, .5fr);
+  align-items: center;
 
   .ion-selected-left {
 
     padding: 10px;
     text-align: center;
+
+    .ion-selected-multi {
+      display: flex;
+      justify-content: center;
+    }
 
     img {
       width: 300px;
@@ -62,12 +68,10 @@
 
   .ion-selected-right {
 
+    text-align: center;
+
     .selected-right-span {
       padding: 10px 0px;
-    }
-
-    .selected-right-span, .selected-right-button {
-      text-align: center;
     }
     
   }

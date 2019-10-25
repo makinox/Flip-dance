@@ -12,7 +12,7 @@
 <ion-content>
   <ion-card class="welcome-card">
 
-    <h2>Selcciona una canción</h2>
+    <h2>Selecciona una canción</h2>
     <ion-button (click)="randomSong()">Random</ion-button>
 
   </ion-card>
@@ -55,7 +55,7 @@
         <div>
           <h5>Participantes</h5>
         </div>
-        <div *ngIf="!peopleSelected.lenght">
+        <div *ngIf="!peopleSelected.length">
           <div class="selected-right-span">
             <span>No hay participantes elegidos</span>
           </div>
@@ -63,17 +63,29 @@
             <ion-button (click)="addPeople()">Agregar</ion-button>
           </div>
         </div>
-        <div *ngIf="peopleSelected.lenght">
-          <div>
-  
-            <img [src]="p.imagen" alt="">
-            <span>{{p.Nombre}}</span>
-  
-          </div>
+        <div *ngIf="peopleSelected.length">
+          <ion-list>
+            <ion-item *ngFor="let p of peopleSelected">
+              <ion-avatar slot="start">
+                <img [src]="p.Imagen">
+              </ion-avatar>
+              <ion-label>
+                <h5>{{p.Nombre}}</h5>
+                <h6>{{p.CancionesJugadasLocal}}</h6>
+              </ion-label>
+              <ion-toggle slot="end"></ion-toggle>
+            </ion-item>
+          </ion-list>
+        </div>
+        <div>
+          <ion-list>
+            <ion-list-header>
+              Asegurados
+            </ion-list-header>
+          </ion-list>
           <div class="selected-right-button">
             <ion-button (click)="confirmPeople()">Confirmar</ion-button>
           </div>
-
         </div>
       </div>
     </div>

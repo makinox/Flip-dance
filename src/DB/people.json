@@ -5,7 +5,9 @@
         "PuntajeGlobal": 1000,
         "PuntajeSesion": 100,
         "Imagen": "https://picsum.photos/id/8/30/30",
-        "Dance": false
+        "Dance": false,
+        "CancionesJugadasLocal": 0,
+        "CancionesJugadasGlobal": 100
     },
     {
         "ID": 0,
@@ -13,7 +15,9 @@
         "PuntajeGlobal": 1000,
         "PuntajeSesion": 100,
         "Imagen": "https://picsum.photos/id/8/30/30",
-        "Dance": false
+        "Dance": false,
+        "CancionesJugadasLocal": 0,
+        "CancionesJugadasGlobal": 100
     },
     {
         "ID": 0,
@@ -21,7 +25,9 @@
         "PuntajeGlobal": 1000,
         "PuntajeSesion": 100,
         "Imagen": "https://picsum.photos/id/8/30/30",
-        "Dance": false
+        "Dance": false,
+        "CancionesJugadasLocal": 0,
+        "CancionesJugadasGlobal": 100
     },
     {
         "ID": 0,
@@ -29,7 +35,9 @@
         "PuntajeGlobal": 1000,
         "PuntajeSesion": 100,
         "Imagen": "https://picsum.photos/id/8/30/30",
-        "Dance": false
+        "Dance": false,
+        "CancionesJugadasLocal": 0,
+        "CancionesJugadasGlobal": 100
     },
     {
         "ID": 0,
@@ -37,7 +45,9 @@
         "PuntajeGlobal": 1000,
         "PuntajeSesion": 100,
         "Imagen": "https://picsum.photos/id/8/30/30",
-        "Dance": false
+        "Dance": false,
+        "CancionesJugadasLocal": 0,
+        "CancionesJugadasGlobal": 100
     },
     {
         "ID": 0,
@@ -45,7 +55,9 @@
         "PuntajeGlobal": 1000,
         "PuntajeSesion": 100,
         "Imagen": "https://picsum.photos/id/8/30/30",
-        "Dance": false
+        "Dance": false,
+        "CancionesJugadasLocal": 0,
+        "CancionesJugadasGlobal": 100
     },
     {
         "ID": 0,
@@ -53,6 +65,8 @@
         "PuntajeGlobal": 1000,
         "PuntajeSesion": 100,
         "Imagen": "https://picsum.photos/id/8/30/30",
-        "Dance": false
+        "Dance": false,
+        "CancionesJugadasLocal": 0,
+        "CancionesJugadasGlobal": 100
     }
 ]

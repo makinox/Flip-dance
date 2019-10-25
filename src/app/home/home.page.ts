@@ -12,12 +12,12 @@ export class HomePage {
   private songlist: Array<object> = songs
   public selectedSong: object = {}
   public confirmedSong: object = songs[0]
-  public peopleList: Array<object> = people
-  public peopleSelected: Array<object> = []
+  private peopleList: Array<object> = people
+  public peopleSelected: Array<object> = people
 
   constructor() {
-    console.log(this.peopleList)
-    console.log(this.peopleSelected)
+    // console.log(this.peopleList)
+    // console.log(this.peopleSelected)
     // this.selectedSong['status'] = true
   }
 
@@ -35,6 +35,15 @@ export class HomePage {
   public confirmSong() {
     this.confirmedSong = this.selectedSong
     this.selectedSong = {}
+  }
+
+  public addPeople() {
+    this.peopleSelected = this.peopleList
+    console.log(this.peopleSelected)
+  }
+
+  public confirmPeople() {
+    this.peopleSelected = []
   }
 
 }
