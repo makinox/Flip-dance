@@ -8,16 +8,21 @@ import songs from '../../DB/songs.json'
 })
 export class HomePage {
 
+  private songlist: Array<object> = songs
+  public selectedSong: object = {}
+
   constructor() {
-    console.log(songs)
+    console.log(this.songlist)
+    console.log(this.selectedSong)
   }
 
-  randomSong() {
-    const random = this.getRandomInt(0, songs.length)
-    console.log(songs[random])
+  public randomSong() {
+    const random = this.getRandomInt(0, this.songlist.length)
+    this.selectedSong = this.songlist[random]
+    console.log(this.selectedSong)
   }
 
-  getRandomInt(min: number = 0, max: number = 5) {
+  private getRandomInt(min: number = 0, max: number = 5) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 

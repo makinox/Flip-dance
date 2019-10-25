@@ -1,4 +1,44 @@
-.welcome-card img {
-  max-height: 35vh;
-  overflow: hidden;
+.welcome-card {
+  
+  display: grid;
+  padding: 20px;
+  justify-content: center;
+
+  h2 {
+    display: block;
+  }
+}
+
+.ion-card-body {
+
+  display: grid;
+  justify-content: center;
+  text-align: center;
+
+  div:first-of-type {
+
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+
+    h2 {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  .ion-card-multi {
+
+    display: flex;
+    justify-content: center;
+    
+    img {
+      width: 300px;
+      height: 300px;
+      border-radius: 5px;
+    }
+
+  }
+
 }

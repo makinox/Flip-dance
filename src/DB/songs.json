@@ -6,7 +6,8 @@
         "Dificultad": "Facil",
         "Intensidad": "Moderada",
         "Version": "Normal",
-        "Año": "2019"
+        "Año": "2019",
+        "status": false
     },
     {
         "ID": 1,
@@ -15,7 +16,8 @@
         "Dificultad": "Facil",
         "Intensidad": "Moderada",
         "Version": "Años 20",
-        "Año": "2019"
+        "Año": "2019",
+        "status": false
     },
     {
         "ID": 2,
@@ -24,7 +26,8 @@
         "Dificultad": "Facil",
         "Intensidad": "Baja",
         "Version": "Normal",
-        "Año": "2019"
+        "Año": "2019",
+        "status": false
     },
     {
         "ID": 3,
@@ -33,7 +36,8 @@
         "Dificultad": "Dificil",
         "Intensidad": "Intensa",
         "Version": "Normal",
-        "Año": "2019"
+        "Año": "2019",
+        "status": false
     },
     {
         "ID": 4,
@@ -42,6 +46,7 @@
         "Dificultad": "Extrema",
         "Intensidad": "Intensa",
         "Version": "Extrema",
-        "Año": "2019"
+        "Año": "2019",
+        "status": false
     }
 ]
