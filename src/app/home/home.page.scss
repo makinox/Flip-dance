@@ -42,3 +42,34 @@
   }
 
 }
+
+.ion-selected-body {
+
+  display: grid;
+  grid-template-columns: repeat(2, .5fr);
+
+  .ion-selected-left {
+
+    padding: 10px;
+    text-align: center;
+
+    img {
+      width: 300px;
+      border-radius: 5px;
+    }
+
+  }
+
+  .ion-selected-right {
+
+    .selected-right-span {
+      padding: 10px 0px;
+    }
+
+    .selected-right-span, .selected-right-button {
+      text-align: center;
+    }
+    
+  }
+
+}

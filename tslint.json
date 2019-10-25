@@ -41,6 +41,7 @@
       "timeEnd",
       "trace"
     ],
+    "no-string-literal": false,
     "no-empty": false,
     "no-inferrable-types": [
       true,

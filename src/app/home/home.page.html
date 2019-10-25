@@ -10,27 +10,73 @@
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
+  <ion-card class="welcome-card">
 
-      <h2>Selcciona una canción</h2>
-      <ion-button (click)="randomSong()">Random</ion-button>
+    <h2>Selcciona una canción</h2>
+    <ion-button (click)="randomSong()">Random</ion-button>
 
-    </ion-card>
-    <ion-card *ngIf="selectedSong.Nombre">
-      <ion-card-header>
-        <ion-card-subtitle>Canción sugerida</ion-card-subtitle>
-      </ion-card-header>
-      <div class="ion-card-body">
+  </ion-card>
+
+  <ion-card *ngIf="selectedSong.Nombre">
+    <ion-card-header>
+      <ion-card-subtitle>Canción sugerida</ion-card-subtitle>
+    </ion-card-header>
+    <div class="ion-card-body">
+      <div>
+        <h2>{{selectedSong.Nombre}}</h2>
+        <span>{{ (selectedSong.Version == 'Normal') ? '' : '('+ selectedSong.Version +')' }}</span>
+      </div>
+      <div class="ion-card-multi">
+        <img src="https://picsum.photos/id/8/300/300" alt="Image random">
+      </div>
+      <div>
+        <ion-button (click)="confirmSong()">Confirmar</ion-button>
+      </div>
+    </div>
+  </ion-card>
+
+  <ion-card *ngIf="confirmedSong.Nombre">
+    <ion-card-header>
+      <ion-card-subtitle>Canción selecciónada</ion-card-subtitle>
+    </ion-card-header>
+    <div class="ion-selected-body">
+
+      <div class="ion-selected-left">
         <div>
-          <h2>{{selectedSong.Nombre}}</h2>
-          <span>{{ (selectedSong.Version == 'Normal') ? '' : '('+ selectedSong.Version +')' }}</span>
+          <h5>{{confirmedSong.Nombre}}</h5>
+          <span>{{ (confirmedSong.Version == 'Normal') ? '' : '('+ confirmedSong.Version +')' }}</span>
         </div>
-        <div class="ion-card-multi">
+        <div class="ion-selected-multi">
           <img src="https://picsum.photos/id/8/300/300" alt="Image random">
         </div>
+      </div>
+
+      <div class="ion-selected-right">
         <div>
-          <ion-button>Confirmar</ion-button>
+          <h5>Participantes</h5>
+        </div>
+        <div *ngIf="!peopleSelected.lenght">
+          <div class="selected-right-span">
+            <span>No hay participantes elegidos</span>
+          </div>
+          <div class="selected-right-button">
+            <ion-button (click)="addPeople()">Agregar</ion-button>
+          </div>
+        </div>
+        <div *ngIf="peopleSelected.lenght">
+          <div>
+  
+            <img [src]="p.imagen" alt="">
+            <span>{{p.Nombre}}</span>
+  
+          </div>
+          <div class="selected-right-button">
+            <ion-button (click)="confirmPeople()">Confirmar</ion-button>
+          </div>
+
         </div>
       </div>
-    </ion-card>
+    </div>
+  </ion-card>
+
 </ion-content>

@@ -1,0 +1,58 @@
+[
+    {
+        "ID": 0,
+        "Nombre": "Jesu",
+        "PuntajeGlobal": 1000,
+        "PuntajeSesion": 100,
+        "Imagen": "https://picsum.photos/id/8/30/30",
+        "Dance": false
+    },
+    {
+        "ID": 0,
+        "Nombre": "Okiba",
+        "PuntajeGlobal": 1000,
+        "PuntajeSesion": 100,
+        "Imagen": "https://picsum.photos/id/8/30/30",
+        "Dance": false
+    },
+    {
+        "ID": 0,
+        "Nombre": "Carol",
+        "PuntajeGlobal": 1000,
+        "PuntajeSesion": 100,
+        "Imagen": "https://picsum.photos/id/8/30/30",
+        "Dance": false
+    },
+    {
+        "ID": 0,
+        "Nombre": "Rose",
+        "PuntajeGlobal": 1000,
+        "PuntajeSesion": 100,
+        "Imagen": "https://picsum.photos/id/8/30/30",
+        "Dance": false
+    },
+    {
+        "ID": 0,
+        "Nombre": "Saray",
+        "PuntajeGlobal": 1000,
+        "PuntajeSesion": 100,
+        "Imagen": "https://picsum.photos/id/8/30/30",
+        "Dance": false
+    },
+    {
+        "ID": 0,
+        "Nombre": "Yuly",
+        "PuntajeGlobal": 1000,
+        "PuntajeSesion": 100,
+        "Imagen": "https://picsum.photos/id/8/30/30",
+        "Dance": false
+    },
+    {
+        "ID": 0,
+        "Nombre": "Santiago",
+        "PuntajeGlobal": 1000,
+        "PuntajeSesion": 100,
+        "Imagen": "https://picsum.photos/id/8/30/30",
+        "Dance": false
+    }
+]
