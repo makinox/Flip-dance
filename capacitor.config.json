@@ -1,0 +1,8 @@
+{
+  "appId": "com.jesusbossa.flip",
+  "appName": "flip",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

@@ -18,6 +18,9 @@ log.txt
 npm-debug.log*
 
 /.idea
+/.gradle
+/android
+/ios
 /.ionic
 /.sass-cache
 /.sourcemaps
