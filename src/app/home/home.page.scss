@@ -73,6 +73,11 @@
     .selected-right-span {
       padding: 10px 0px;
     }
+
+    ion-list {
+      max-height: 350px;
+      overflow: auto;
+    }
     
   }
 

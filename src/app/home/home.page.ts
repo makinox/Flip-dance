@@ -12,8 +12,9 @@ export class HomePage {
   private songlist: Array<object> = songs
   public selectedSong: object = {}
   public confirmedSong: object = songs[0]
+  public peopleControl: boolean
   private peopleList: Array<object> = people
-  public peopleSelected: Array<object> = people
+  public peopleSelected: Array<object> = []
 
   constructor() {
     // console.log(this.peopleList)
@@ -38,8 +39,18 @@ export class HomePage {
   }
 
   public addPeople() {
-    this.peopleSelected = this.peopleList
-    console.log(this.peopleSelected)
+    // this.peopleSelected = this.peopleList
+    this.peopleControl = true
+    console.log(this.peopleList)
+  }
+
+  public changePeople(e, id: number) {
+    console.log(e)
+    if (this.peopleSelected.length < 6) {
+      this.peopleSelected.push(this.peopleList.find((el: object) => el['ID'] === id))
+    } else {
+      e.detail.checked = false
+    }
   }
 
   public confirmPeople() {

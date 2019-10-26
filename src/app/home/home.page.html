@@ -55,7 +55,7 @@
         <div>
           <h5>Participantes</h5>
         </div>
-        <div *ngIf="!peopleSelected.length">
+        <div *ngIf="!peopleControl">
           <div class="selected-right-span">
             <span>No hay participantes elegidos</span>
           </div>
@@ -63,9 +63,9 @@
             <ion-button (click)="addPeople()">Agregar</ion-button>
           </div>
         </div>
-        <div *ngIf="peopleSelected.length">
+        <div *ngIf="peopleControl">
           <ion-list>
-            <ion-item *ngFor="let p of peopleSelected">
+            <ion-item *ngFor="let p of peopleList">
               <ion-avatar slot="start">
                 <img [src]="p.Imagen">
               </ion-avatar>
@@ -73,15 +73,8 @@
                 <h5>{{p.Nombre}}</h5>
                 <h6>{{p.CancionesJugadasLocal}}</h6>
               </ion-label>
-              <ion-toggle slot="end"></ion-toggle>
+              <ion-toggle (ionChange)="changePeople($event, p.ID)" slot="end"></ion-toggle>
             </ion-item>
-          </ion-list>
-        </div>
-        <div>
-          <ion-list>
-            <ion-list-header>
-              Asegurados
-            </ion-list-header>
           </ion-list>
           <div class="selected-right-button">
             <ion-button (click)="confirmPeople()">Confirmar</ion-button>
