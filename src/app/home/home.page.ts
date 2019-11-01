@@ -24,11 +24,8 @@ export class HomePage {
   }
 
   async presentToast(message: string = 'Your settings have been saved.') {
-    const toast = await this.toastController.create({
-      message,
-      duration: 2000
-    });
-    toast.present();
+    const toast = await this.toastController.create({ message, duration: 2000 })
+    toast.present()
   }
 
   public randomSong() {
@@ -39,7 +36,7 @@ export class HomePage {
   }
 
   private getRandomInt(min: number = 0, max: number = 5) {
-    return Math.floor(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (max - min)) + min
   }
 
   public confirmSong() {
