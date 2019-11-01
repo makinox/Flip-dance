@@ -73,7 +73,7 @@
                 <h5>{{p.Nombre}}</h5>
                 <h6>{{p.CancionesJugadasLocal}}</h6>
               </ion-label>
-              <ion-toggle (ionChange)="changePeople($event, p.ID)" slot="end"></ion-toggle>
+              <ion-toggle (ionChange)="changePeople($event.detail, p.ID)" slot="end"></ion-toggle>
             </ion-item>
           </ion-list>
           <div class="selected-right-button">
