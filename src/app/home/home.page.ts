@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { ToastController } from '@ionic/angular'
 import songs from '../../DB/songs.json'
 import people from '../../DB/people.json'
 
@@ -16,10 +17,18 @@ export class HomePage {
   private peopleList: Array<object> = people
   public peopleSelected: Array<object> = []
 
-  constructor() {
+  constructor(private toastController: ToastController) {
     // console.log(this.peopleList)
     // console.log(this.peopleSelected)
     // this.selectedSong['status'] = true
+  }
+
+  async presentToast(message: string = 'Your settings have been saved.') {
+    const toast = await this.toastController.create({
+      message,
+      duration: 2000
+    });
+    toast.present();
   }
 
   public randomSong() {
@@ -45,12 +54,16 @@ export class HomePage {
   }
 
   public changePeople(e, id: number) {
-    console.log(e)
     if (this.peopleSelected.length < 6) {
-      this.peopleSelected.push(this.peopleList.find((el: object) => el['ID'] === id))
+      if (e.checked) {
+        this.peopleSelected.push(this.peopleList.find((el: object) => el['ID'] === id))
+      } else {
+        this.peopleSelected = this.peopleList.filter((el: object) => el['ID'] === id)
+      }
     } else {
-      e.detail.checked = false
+      this.presentToast('La lista ya esta llena.')
     }
+    console.log(this.peopleSelected)
   }
 
   public confirmPeople() {
