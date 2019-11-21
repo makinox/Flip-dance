@@ -15,7 +15,7 @@ export class HomePage {
   public confirmedSong: object = songs[0]
   public peopleControl: boolean
   private peopleList: Array<object> = people
-  public peopleSelected: Array<object> = []
+  public testChange: any
 
   constructor(private toastController: ToastController) {
     // console.log(this.peopleList)
@@ -51,26 +51,29 @@ export class HomePage {
   }
 
   public changePeople(e, id: number) {
-    if (this.peopleSelected.length < 6) {
-      if (e.checked) {
-        console.log('Agregar')
-        this.peopleSelected.push(this.peopleList.find((el: object) => el['ID'] === id))
-      } else {
-        console.log('Borrar')
-        this.peopleSelected = this.peopleSelected.filter((el: object) => el['ID'] !== id)
+    console.log(this.peopleList)
+    let countPeople = 0
+    this.peopleList.map(el => {
+      if (el['Dance']) {
+        countPeople++
       }
-    } else {
-      if (!e.checked) {
-        console.log('Borrar')
-        this.peopleSelected = this.peopleSelected.filter((el: object) => el['ID'] !== id)
-      }
-      this.presentToast('La lista ya esta llena.')
+    })
+    console.log(countPeople)
+    if (countPeople > 6) {
+      this.peopleList.map(el => {
+        if (el['ID'] === id) {
+          el['Dance'] = false
+        }
+      })
+      this.presentToast('Deben haber solo 6 personas máximo')
     }
-    console.log(this.peopleSelected)
+
   }
 
   public confirmPeople() {
-    this.peopleSelected = []
+    this.peopleList.map(el => {
+      el['Dance'] = false
+    })
   }
 
 }
