@@ -53,11 +53,17 @@ export class HomePage {
   public changePeople(e, id: number) {
     if (this.peopleSelected.length < 6) {
       if (e.checked) {
+        console.log('Agregar')
         this.peopleSelected.push(this.peopleList.find((el: object) => el['ID'] === id))
       } else {
-        this.peopleSelected = this.peopleList.filter((el: object) => el['ID'] === id)
+        console.log('Borrar')
+        this.peopleSelected = this.peopleSelected.filter((el: object) => el['ID'] !== id)
       }
     } else {
+      if (!e.checked) {
+        console.log('Borrar')
+        this.peopleSelected = this.peopleSelected.filter((el: object) => el['ID'] !== id)
+      }
       this.presentToast('La lista ya esta llena.')
     }
     console.log(this.peopleSelected)
